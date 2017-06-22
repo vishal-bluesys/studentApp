@@ -1,0 +1,23 @@
+<ion-view view-title="Assignment"  name="assignment-view">
+   	 <ion-content class="">
+	     <ion-list>
+		  <ion-item ng-repeat="item in listassignment" href="#/main/submission/{{item.sub_id}}/{{item.ass_no}}" >
+			   
+			   <div class="row">
+				   <div class="col col-40"> Assignment:{{item.ass_no}} </div>
+				   <div class="col col-40">  {{item.submission_date}} </div>
+				    <div class="col col-10" ng-if="item.submitted==1" style="color:green;"><i class="icon ion-android-done-all"></i></div>
+					<div class="col col-10" ng-if="item.approved==R" style="color:blue;"><i class="icon ion-loop"></i></div>
+					<div class="col col-10" ng-if="item.submitted==0" style="color:red;"><i class="icon ion-ios-information-outline"> </i></div>
+					<div class="col col-10" ng-if="item.approved==A" style="color:green;"><i class="icon ion-thumbsdown"></i> </div>
+					<div class="col col-10" ng-if="item.submitted==1" style="color:green;"> <span class="badge badge-assertive">{{item.ass_count}}</span></div>
+					<div class="col col-10" ng-if="item.submitted==0" style="color:green;"> <span class="badge badge-assertive">0</span></div></div>
+			  </div>   
+			  <div class="row"> <p> {{item.ass_title}}  </p></div>
+			  
+		  </ion-item>
+      </ion-list>
+	 
+	       
+  </ion-content>
+</ion-view>

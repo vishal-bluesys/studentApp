@@ -1,0 +1,139 @@
+<ion-view view-title="Assignment {{id}}" name="submission-view" class="assignment">
+   <ion-nav-buttons side="right">
+        <button class="left button button-icon icon ion-ios-list-outline" ng-click="listsubmission()" ></button>
+        <button class="right button button-icon icon ion-plus" ng-click="showsubmissionform()"   ng-show="adnewSubmission" ></button>
+        <button class="right button button-icon icon ion-android-attach"  ng-click="popover.show($event)"    ng-hide="adnewSubmission" ></button>
+    </ion-nav-buttons>
+
+	 <ion-content class=" assignment ">
+	   <div class="list " ng-hide="adnewSubmission">
+        <form name="assigmentform"  novalidate="">
+		   <input type="hidden" ng-model="data.sub_id">
+        	<label class="item item-input" >
+				<div class="input-label">
+				 Assignment - {{ass_no}}
+				</div>
+				
+			</label>
+		    <label class="item item-input">
+				<div class="input-label">
+				 Title - {{ass_title}}
+				</div>
+				
+			</label>
+		    <label class="item item-input">
+				<div class="input-label">
+				 Description - {{ass_description}}
+				</div>
+				
+			</label>
+		     <div class="item">
+				<div class ="item item-icon-right"ng-repeat="img in images">
+					<img ng-src="{{img}}" style="max-width:250px;max-height:250px" />
+					 <i class="icon ion-trash-a" ng-click="deletePic($index);"></i>
+				</div>
+	         </div>
+		  
+		   <label class="item item-input">
+			  <span class="input-label">Submission Details:</span>
+			  </label>
+			 <label class="item item-input">
+			  <textarea name="assignDetails" rows="6" ng-model="data.subdetails" required></textarea>
+			   <span class="error" ng-show="( assigmentform.assignDetails.$dirty || submitted  ) && assigmentform.assignDetails.$error.required">details are required </span>
+			</label>
+			 <button class="button button-block button-positive" ng-click="uploadImages(data)" ng-disabled="!assigmentform.$valid">Submit</button>
+			<!-- <button class="button button-block button-positive" ng-click="uploadImages()">upload</button>-->
+		        
+        </form>
+     </div>
+		<!--ADD Assigment submission -->
+   <ion-list ng-hide="submissionList">
+      <ion-item ng-repeat="item in submissions_list" ng-if="item.sub_no" ng-click="showasubdetails({{item}})">
+           <div class="row">
+               <div class="col col-80">Submission -{{item.sub_no}}  </div>
+			   <div class="col col-20" class="tab-item"  ng-if="item.approved=='A'" Style='color:black' >
+					<i class="icon ion-thumbsup" ></i>
+					
+			   </div>
+			   <div class="col col-20" class="tab-item"  ng-if="item.approved=='R'" Style='color:red'>
+				  <i class="icon ion-thumbsdown"></i>
+				  
+				</div>
+				 <div class="col col-20" class="tab-item"  ng-if="item.approved=='N'" Style='color:gray'>
+				  <i class="icon ion-ionic"></i>
+				  
+				</div>
+            </div>   
+      </ion-item>
+	   <ion-item ng-if="!item.sub_no">
+	     <span class="error"> No More submissions Click + add </span>
+	   </ion-item>
+      </ion-list>
+	  
+	  
+	  <!-- Submission Details -->
+	<div class="list card" ng-hide="ass_details" >
+  <div class="item">
+  	<h2>{{ass_title}}</h2>
+    <p> Submission-{{sub_no}}</p>
+    <p> Submitted on:{{submitteddate}} 	 </p>
+  </div>
+  <div class="item item-body">
+    Assignment Desc: <p>
+    {{ass_description}}
+		  </p>
+  </div>
+  <div class="item item-list-detail">
+    
+	<ion-scroll direction="x">
+		<!--<img ng-src="{{img}}" style="max-width:250px;max-height:250px" />-->
+		<img ng-repeat="img in ass_image" image-lazy-src="{{ img }}" image-lazy-loader="android" image-lazy-distance-from-bottom-to-load="-200"  ng-click="showImages($index)" class="image-list-thumb"  >
+	</ion-scroll>
+	
+  
+  </div>
+  <div class="item item-body">
+   Submission Details:  <p>
+    {{sub_description}}
+
+		  </p>
+  </div>
+  <div class="item item-body">
+    Comments: <p>  {{comment}}	  </p>
+    </div>
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    Status:<div class="tab-item"  ng-if="approved=='A'">
+      <i class="icon ion-thumbsup" ></i>
+      final
+    </div>
+    <div class="tab-item"  ng-if="approved=='R'">
+      <i class="icon ion-thumbsdown"></i>
+      rework
+    </div>
+	
+
+	</div>
+
+</div>
+	  
+	  
+<script id="templates/popover.html" type="text/ng-template" class="popover">
+      <ion-popover-view  class="popover2">
+        <ion-content>
+          <div class="list">
+		          <a class="item icon-left ion-aperture " ng-click="selectImage()">
+				Capture Image
+			   </a>
+			   <a class="item  icon-left  ion-images" ng-click="imagepick()">
+				Select from gallary
+			   </a>
+          </div>
+        </ion-content>
+      </ion-popover-view>
+    </script>       
+  </ion-content>
+  
+  
+  
+  
+</ion-view>

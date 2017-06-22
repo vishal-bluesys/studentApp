@@ -1,0 +1,120 @@
+<ion-view view-title="Dashboard" class="dashboard">
+
+<ion-nav-buttons side="right">
+    <!--<a class="button button-icon icon ion-power" ng-click="logout()"></a>-->
+	<button class="button button-icon ion-android-more-vertical" ng-click="popover.show($event)">
+        </button>
+  </ion-nav-buttons>
+
+  <ion-content class="padding">
+    <div class="row ">
+	 <div class="col col-70"><a  href="#/main/notices" class="button button-block noticeBoard">NOTICE BOARD</a></div>
+	 <div class="col col-20 hidden-chat-link"><a  href="#/main/hiddenchat"><img class="button button-block chat-btn" src="img/icon/hiddenzonelink.png"></a></div>
+	</div>  
+    
+    <div class="quick-links">
+	 <div class="row">
+	   <a class="col col-50"   href="#/main/assignment" ><figure><img class="button button-block quick-links-btn" src="img/icon/assignment-links.png"><figcaption>Assignment</figcaption></figure></a>
+	   <a class="col col-50"   href="#/main/tab" ><figure><img class="button button-block quick-links-btn" src="img/icon/brain-chat.png"><figcaption>Brain Chat</figcaption></figure></a>
+	    
+	 </div>
+     
+	 <div class="row">
+	   <a class="col col-50"  href="#/main/sessions" ><figure><img class="button button-block quick-links-btn" src="img/icon/task.png"><figcaption>Task Pad</figcaption></figure></a>
+	 <a class="col col-50" href="#/main/calender" ><figure><img class="button button-block quick-links-btn" src="img/icon/calender.png"><figcaption>Calender</figcaption></figure></a>
+	    
+	 </div>
+	 
+	 <div class="row">
+	   <a href="#/main/references" class="col col-50"><figure><img class="button button-block quick-links-btn" src="img/icon/referance.png"><figcaption>Reference</figcaption></figure></a>
+	    <a href="#/main/syllabus" class="col col-50"><figure><img class="button button-block quick-links-btn" src="img/icon/syllabus.png"><figcaption>Syllabus</figcaption></figure></a>
+	 </div>
+	 
+    </div>	
+	  <div class="footer-link"> 
+       <div class="row">
+	   <div class="col col-30"  ng-click="contactUs();" ><figure><img class="button button-block quick-links-foot-btn" src="img/icon/contact.png"><figcaption>Contact</figcaption></figure></div>
+	    <div class="col col-30" ng-click="website();"><figure><img class="button button-block quick-links-foot-btn" src="img/icon/web.png"><figcaption>Web</figcaption></figure></div>
+	    <div class="col col-30" ng-click="youtube();"><figure><img class="button button-block quick-links-foot-btn" src="img/icon/youtube.png"><figcaption>Youtube</figcaption></figure></div>
+	 </div>
+	 </div>
+    </div>             
+	
+    <script id="templates/popover.html" type="text/ng-template">
+      <ion-popover-view>
+        <ion-content>
+          <div class="list">
+		        <a class="item" >
+					Welcome {{username}}</a>
+				 <a class="item icon-left ion-clipboard button-positive">
+					Application ver 1.0
+				 </a>
+                <a class="item icon-left ion-clipboard button-positive" href="#/main/changepass" ng-click="popover.hide()">
+					Change Password
+				</a>
+				
+				<a class="item icon-left ion-easel " href="#/main/editprofile" ng-click="popover.hide()">
+				Edit Profile
+				</a>
+				<a class="item  icon-left  icon ion-power" ng-click="logout()">
+				Logout
+				</a>
+          </div>
+        </ion-content>
+      </ion-popover-view>
+    </script>	
+           
+<script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-balanced">
+        
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list>
+                <ion-item class="item-divider">Mumbai</ion-item>
+                <ion-item>
+                <div class="row"><div class="col col-100">
+                    Manthan,<br/>
+					The School of Creative Advertising and Art<br>
+                    3, Shivsmruti Building, N. M. Joshi Marg,<br>
+                    Currey Road (W) Mumbai – 400013.<br></div></div>
+                    <div class="row">
+                    <div class="col col-50"> <a class="button button-clear button-assertive   button-icon  icon ion-ios-telephone-outline"  ng-click="dialNumber('9167013959')" >9167013959</a> </div>                      <div class="col col-50"><a  class="button button-clear button-assertive   button-icon  icon ion-ios-telephone-outline"  ng-click="dialNumber('9819954989')"> 9819954989 </a></div>                      </div>
+                </ion-item>
+                <ion-item class="item-divider">Pune</ion-item>
+                <ion-item>
+                      <div class="row"><div class="col col-100">
+                Manthan, <br/>
+				The School of Creative Advertising and Art<br>
+                Shop No. 7, Mangalmurti Complex,<br>
+                Behind Hirabaug Ganpati,<br>
+                Tilak Road,Pune 411030<br></div></div>
+                <div class="row">
+              <div class="col col-50"> <a class="button button-clear button-assertive   button-icon  icon ion-ios-telephone-outline"  ng-click="dialNumber('020265203432')" >020-65203432</a> </div>                   <div class="col col-50"><a  class="button button-clear button-assertive   button-icon  icon ion-ios-telephone-outline" ng-click="dialNumber('08484831738')"> 08484831738 </a></div>                  </div>
+                   
+                </ion-item>
+                <ion-item class="item-divider">Andheri</ion-item>
+                <ion-item>
+                      <div class="row"><div class="col col-100">
+                        Manthan,<br/>
+						The School of Creative Advertising and Art<br>
+                        Blaisian Apartment,<br>
+                        B wing, Shop no.7, <br>
+                        Ceaser Road, S.V.Road,<br>
+                        Opp. Amboli Church,<br>
+                        Amboli Naka Signal,<br>
+                        Besides Saint Blaise Highschool,<br>
+                        Andheri(W), Mumbai – 400058.<br></div></div>
+                      <div class="row">
+              <div class="col col-50"> <a class="button button-clear button-assertive   button-icon  icon ion-ios-telephone-outline" ng-click="dialNumber('9820551263')" >9820551263</a> </div>                   <div class="col col-50"><a  class="button button-clear button-assertive   button-icon  icon ion-ios-telephone-outline" ng-click="dialNumber('9167013959')"> 9167013959 </a></div>  
+                
+                    </div>
+                        
+                </ion-item>
+            </ion-list>
+        </ion-content>
+      </ion-modal-view>
+    </script>
+  </ion-content>
+</ion-view>

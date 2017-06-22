@@ -1,0 +1,24 @@
+<ion-view align-title="center" view-title="Change Password" name="dashboard-view" class="dashboard">
+  
+  <ion-content class="padding text-center">
+     
+	  <div class="list">
+		  <form name="changepass"  ng-submit="changepass.$valid && updatepassword(data);" novalidate >
+
+		    <label class="item item-input">
+			  <span class="input-label">New Password:</span>
+			  <input type="password" name="newpass" ng-model="data.password" outocomplete="off" required>
+			</label>
+			  <span class="error" ng-show="(changepass.newpass.$dirty || submitted ) && changepass.newpass.$error.required">
+						New Password is required
+					</span>
+			 <button type="submit" class="button button-block button-positive" ng-disabled="!changepass.$valid ">Change Password</button>
+                         <input type="button" value="Cancel" class="button button-block button-positive" ng-click="goBack()" >	 
+                  </form>
+		</div>
+  
+  
+  
+  
+  </ion-content>
+  </ion-view>

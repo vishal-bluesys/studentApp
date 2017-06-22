@@ -1,0 +1,91 @@
+<ion-view align-title="center" view-title="Edit profile" name="dashboard-view" class="dashboard">
+  
+  <ion-content class="padding text-center">
+     
+	  <div class="list">
+		  	 <form name="editProfile"  ng-submit="editProfile.$valid && updateprofile(editdata);" novalidate >
+
+			<label class="item item-input">
+			  <span class="input-label">Name:</span>
+			  <input type="text" ng-model="editdata.name" name="yourname" required>
+			  <input type="hidden" ng-model="editdata.id" >
+			</label>
+			<span class="error" ng-show="(editProfile.yourname.$dirty || submitted ) && editProfile.yourname.$error.required">
+						Name is required
+					</span>
+			<label class="item item-input">
+			  <span class="input-label">Username:</span>
+			  <input type="text" ng-model="editdata.username" name="username" readonly required>
+			</label>
+		    <span class="error" ng-show="(editProfile.username.$dirty || submitted ) && editProfile.username.$error.required">
+					User Name is required
+					</span>
+
+			<label class="item item-input">
+			  <span class="input-label">Birth Date:</span>
+			  <input type="date" ng-model="editdata.dob"  name="dob" required>
+			</label>
+			<span class="error" ng-show="(editProfile.dob.$dirty || submitted ) && editProfile.dob.$error.required">
+					date of birth is required
+					</span>
+			<label class="item item-input">
+			  <span class="input-label">Gender:</span>
+				<ion-radio name="gender" ng-model="editdata.gender" ng-value="1" required>Male</ion-radio>
+				 <ion-radio name="gender" ng-model="editdata.gender" ng-value="2" required>Female</ion-radio>
+			 </label>
+			 <span class="error" ng-show="(editProfile.gender.$dirty || submitted ) && editProfile.gender.$error.required">
+					Gender is required
+					</span>
+			<label class="item item-input">
+			  <span class="input-label">Email:</span>
+			  <input type="email" name = "email" ng-model="editdata.email" required>
+			</label>
+			<span class="error" ng-show="(editProfile.email.$dirty || submitted ) && editProfile.email.$error.required">
+					Email is required
+					</span>
+			<span class="error" ng-show="(editProfile.email.$dirty || submitted ) && editProfile.email.$error.email">
+					Email is invalid
+					</span>
+			<label class="item item-input">
+			  <span class="input-label">Alternative Email:</span>
+			  <input type="email" name="alrtemail" ng-model="editdata.email2" >
+			</label>
+			<span class="error" ng-show="(editProfile.alrtemail.$dirty || submitted ) && editProfile.alrtemail.$error.email">
+					Email is invalid
+					</span>
+			<label class="item item-input">
+			  <span class="input-label">Mobile:</span>
+			  <input type="text" ng-model="editdata.mob" name="mobile" required>
+			</label>
+			<span class="error" ng-show="(editProfile.mobile.$dirty || submitted ) && editProfile.mobile.$error.required">
+					Mobile No. is required
+					</span>
+			<label class="item item-input">
+			  <span class="input-label">Alternative Mobile:</span>
+			  <input type="text" ng-model="editdata.mob2" >
+			</label>
+			<label class="item item-input">
+			  <span class="input-label">Address:</span>
+			  <input type="text" name="address" ng-model="editdata.address" required>
+			</label>
+			<span class="error" ng-show="(editProfile.address.$dirty || submitted ) && editProfile.address.$error.required">
+					Address is required
+					</span>
+			<label class="item item-input">
+			  <span class="input-label">Education:</span>
+			  <input type="text" name="education" ng-model="editdata.education" required>
+			</label>
+			<span class="error" ng-show="(editProfile.education.$dirty || submitted ) && editProfile.education.$error.required">
+					Education is required
+					</span>
+		  <button type="submit" class="button button-block button-positive" ng-disabled="!editProfile.$valid">Save</button>
+                  <input type="button" value="Cancel" class="button button-block button-positive" ng-click="goBack()" >	 
+	  </form>
+
+		</div>
+  
+      
+  
+  
+  </ion-content>
+  </ion-view>

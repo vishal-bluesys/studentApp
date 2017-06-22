@@ -1,0 +1,54 @@
+ <ion-view  view-title = "Brain Chat" name="query-view" class="brain-chat">
+   <ion-nav-buttons side="right">
+        <button class=" button button-icon icon ion-plus" ng-click="creatnewmsg()" ></button>
+    </ion-nav-buttons>   
+
+<ion-tabs >
+
+  <!-- Dashboard Tab -->
+  <ion-tab title="Chats" href="#/main/queries"  >
+   
+  </ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab title="Contacts" class="item-active">
+   
+  </ion-tab>
+
+
+
+
+</ion-tabs>	
+   <ion-content class="chat-content" >
+              <ion-list class="list" ng-hide="list" >
+                     <ion-item ng-repeat="item in data" class="item item-icon-right"  href="#/main/query/{{item.faculty_id}}/{{item.name}} " > 
+			           {{item.name}} <span class="badge badge-assertive"></span>
+                         <i class="icon ion-ios-arrow-left" ></i>
+              
+                    </ion-item>
+                </ion-list>
+ 
+<script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-balanced">
+          <h1 class="title">Query</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+            <form name="Comment"  novalidate="">
+                 <label class="item item-input">
+                   
+                    <textarea cols="10" rows='10' style=" border : 1px solid #494949;" name="message" ng-model="formdata.message" required></textarea>
+             </label>
+           <button type="submit"  class="button button-icon icon ion-paper-airplane" ng-click="sendmessage(formdata.message)">  Send Query </button>
+           </form>
+        </ion-content>
+      </ion-modal-view>
+    </script>      
+      
+</ion-content>
+
+
+
+
+</ion-view>

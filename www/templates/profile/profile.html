@@ -1,0 +1,80 @@
+<ion-view view-title="Profile" name="profile-view">
+   <ion-content class="profile-view">
+          <div class= "top-content row">
+            <div class= "profile-container">
+                <div class= "user-image-container">
+                    <pre-img ratio= "_1_1" helper-class= "rounded-image">
+					<img id = "profileImage" class= "user-image" ng-src= "{{profile_pic}}"   style="height:150px ; width:150px;"spinner-on-load> 
+					</pre-img> </div>
+                <div class= "user-name">{{editdata.name}}</div>
+                <div class= "user-twitter">{{editdata.email}}</div>
+			</div>
+				<div class= "user-background-image-outer">
+					<img src="img/background/default_profile.jpg" style="
+																			width: 100%;
+																			z-index: -3px;
+																			height: 144px;
+																		">
+				</div>
+			</div>
+			
+		 <div class="bottom-content list">
+		   <label class="item item-input">
+			  <span class="input-label">Username:</span>{{editdata.username}}
+			 
+			</label>
+			<label class="item item-input">
+			  <span class="input-label">Birth Date:</span>{{editdata.dob | date}}
+			  </label>
+			
+			<label class="item item-input">
+                <span class="input-label">Gender:</span>{{editdata.gender==1 ? "Male" : "Female"}}
+                
+			 </label>
+			 
+			 <label class="item item-input">
+			  <span class="input-label">Address:</span><p>{{editdata.address}}</p>
+			 
+			</label>
+		
+			
+				
+			<label class="item item-input">
+			  <span class="input-label">Email:</span>{{editdata.email}}
+			 
+			</label>
+			
+			<label class="item item-input">
+			  <span class="input-label">Alternative Email:</span>{{editdata.email2}}
+			
+			</label>
+			<label class="item item-input">
+			  <span class="input-label">Mobile:</span>{{editdata.mob}}
+			  
+			</label>
+			
+			<label class="item item-input">
+			  <span class="input-label">Alternative Mobile:</span>{{editdata.mob2}}
+			  
+			</label>
+		
+			
+			
+		</div>
+       
+   </ion-content>
+        <!-- Button Starts -->
+ <div class="float-button" >
+ <span class="height-fix">
+    <a class="content" href="#" ng-click="selectImage()">
+      <i class="ion-android-camera"> </i>
+    </a>
+    </span>
+ </div>
+  
+<!-- Button Ends -->
+</ion-view>
+
+
+
+

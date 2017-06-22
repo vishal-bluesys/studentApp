@@ -1,0 +1,13 @@
+<ion-view view-title="Chats" class="hidden-chat">
+  <ion-content >
+              <ion-list>
+                  <ion-item ng-repeat="item in data" class="item item-avatar chat-item"  href="#/main/query/{{item.faculty_id}}/{{item.name}} " > 
+					      <img src="img/icon.png">
+			               <h2>{{item.name}} </h2> 
+							
+                           
+              
+                    </ion-item>
+                </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,48 @@
+<ion-view view-title="submissiondetail" name="submissiondetails-view">
+   	 <ion-content class="">
+<div class="list card" ng-hide="ass_details" >
+  <div class="item">
+  	<h2>{{ass_title}}</h2>
+    <p> Submission-{{sub_no}}</p>
+    <p> Submitted on:{{submitteddate  | date }} </p>
+  </div>
+  <div class="item item-body">
+    Assignment Desc: <p>
+    {{ass_description}}
+		  </p>
+  </div>
+  <div class="item item-list-detail">
+    
+	<ion-scroll direction="x">
+		<!--<img ng-src="{{img}}" style="max-width:250px;max-height:250px" />-->
+		<img ng-repeat="img in ass_image" image-lazy-src="{{ img }}" image-lazy-loader="android" image-lazy-distance-from-bottom-to-load="-200"  ng-click="showImages($index)" class="image-list-thumb"  >
+	</ion-scroll>
+	
+  
+  </div>
+  <div class="item ">
+   Submission Details:  <p>
+    {{sub_description}}
+
+		  </p>
+  </div>
+  <div class="item" >
+    Comments: <p>  {{comment}}	  </p>
+    </div>
+  <div class="item ">
+    Status:<span Style="color:green; font-weight:bold;" ng-if="approved=='A'">
+            final
+    </span>
+    <span  Style="color:red; font-weight:bold; " ng-if="approved=='R'">
+          rework
+    </span>
+	
+
+	</div>
+
+</div>
+     
+     
+     	       
+  </ion-content>
+</ion-view>

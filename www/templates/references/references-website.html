@@ -1,0 +1,36 @@
+<ion-view view-title="References" class="refrences brain-chat">
+
+
+<ion-content class="chat-content">
+
+      <ion-list>
+        <div ng-repeat="group in groups">
+          <ion-item class="item-stable item-icon-right"
+                    ng-click="toggleGroup(group)"
+                    ng-class="{active: isGroupShown(group)}">
+              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{group.name}}
+          </ion-item>
+          <ion-item class="item-accordion"
+                    ng-repeat="item in group.items"
+                    ng-show="isGroupShown(group)">
+            {{item}}
+          </ion-item>
+        </div>
+      </ion-list>
+
+    </ion-content>
+	
+	<ion-tabs >
+
+  <!-- Dashboard Tab -->
+  <ion-tab title="Website" class="item-active"  >
+   
+  </ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab title="Books" href="#/main/books" >
+   
+  </ion-tab>
+</ion-view>

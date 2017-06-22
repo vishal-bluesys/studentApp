@@ -1,0 +1,151 @@
+ <ion-view view-title="Tasks" name="sessions-view" class="tasks">
+    <ion-nav-buttons side="right">
+       <button class="right button button-icon icon ion-ios-list-outline" ng-click="showsummarylist()" ></button> <button class="right button button-icon icon ion-plus" ng-click="showsessionsummaryform()" ></button>
+    </ion-nav-buttons>
+	<!--  <ion-nav-buttons side="left">
+        <button class="left button button-icon icon ion-ios-list-outline" ng-click="showsummarylist()" ></button>
+    </ion-nav-buttons>-->
+  <ion-content class="">
+
+  <div class="row"><div class="col text-center">
+   <!-- <button class="button icon-left ion-clipboard button-positive" ng-click="showsessionsummaryform()" >Submit Sessions Summary</button>
+    <button class="button icon-left ion-clipboard button-positive" ng-click="showsummarylist()" >List Summary</button>-->
+	   	<div class="list" ng-hide="summarylist">
+ 	     	  <div ng-repeat="item in session_sum_list | orderBy:'-date'" class="list" style="border-radius:12px;"  ng-click="showDetails('{{item.title}}','{{item.date}}','{{item.summary}}');">
+			      <div  style="text-align:left; background : #9B9B9B; margin:0px -13px 0px -13px; padding-left:25px"> {{ ( item.date == today) ? 'Today' : item.date|date }} </div>
+				  <div class="list card" style="border-radius:12px; margin-bottom: -10px;">
+				   <div class="item item-divider" style="text-align:left; border-bottom : 2px solid  #9B9B9B;">
+						 <h3>{{item.title}}</h3>
+					   </div>
+					   
+					   <div class="item item-text-wrap">
+						 <p>{{item.summary}}..<p>
+					   </div>
+					   </div>
+			 <!-- <i class="icon ion-edit" ng-click="editsummary({{item.id}},'{{item.title}}','{{item.summary}}','{{item.date}}','{{item.faculty}}','{{item.batchname}}','{{item.coursename}}')"></i>-->
+				<!-- <span ng-click="showDetails('{{item.title}}','{{item.date}}','{{item.summary}}');">{{item.title}}</span>
+			  <!-- <i class="icon ion-trash-a" ng-click="deletesummary($index,{{item.id}});"></i>-->
+			 
+            </div> 
+        </div>
+		 <!--   	<div class="list" ng-hide="summarylist">
+ 	     	  <div ng-repeat="item in session_sum_list">
+			  <a class="item item-icon-left item-icon-right card ">
+				   <div class="item item-divider">
+						  Card header
+					   </div>
+					   
+					   <div class="item item-text-wrap">
+						  Card text...
+					   </div>
+			 <!-- <i class="icon ion-edit" ng-click="editsummary({{item.id}},'{{item.title}}','{{item.summary}}','{{item.date}}','{{item.faculty}}','{{item.batchname}}','{{item.coursename}}')"></i>-->
+				<!-- <span ng-click="showDetails('{{item.title}}','{{item.date}}','{{item.summary}}');">{{item.title}}</span>
+			  <!-- <i class="icon ion-trash-a" ng-click="deletesummary($index,{{item.id}});"></i>
+			  </a>
+            </div> 
+        </div>-->
+		<div class="addtasks" ng-hide="sessionsummaryform">
+		 <div class="list list-inset" >
+           <form  name="submitSession" ng-submit="submitSession.$valid && submitsummary(data)" novalidate="">
+		 	<label class="item item-input">
+			  <span class="input-label">Date:</span>
+			  <input type="date" ng-model="data.summary_date" name="date" required>
+			</label>
+			<span class="error" ng-show="(submitSession.date.$dirty || submitted ) && submitSession.date.$error.required">
+					date is required
+					</span>
+     	    <label class="item item-input">
+			  <span class="input-label">Title:</span>
+			  <input type="text" ng-model="data.title"  name="title" required>
+			 </label>
+			<span class="error" ng-show="(submitSession.title.$dirty || submitted ) && submitSession.title.$error.required">
+					title is required
+					</span>
+			 <label class="item item-input">
+			 <span class="input-label">Summary:</span>
+			 </label>
+			 
+			  <label class="item item-input">
+			  <textarea  rows="20" cols="20" ng-model="data.summary"  name="summary" required></textarea>
+			 </label>
+               <span class="error" ng-show="(submitSession.summary.$dirty || submitted ) && submitSession.summary.$error.required">
+					summary is required
+					</span>
+		
+		  <button  type="submit" class="button button-block button-positive" ng-disabled="!submitSession.$valid">Submit</button>
+             </form>
+		 </div>
+		 </div>
+		 <div class="list list-inset" ng-hide="editsessionsummaryform">
+            <form name="editSessioninfo" ng-submit="editSessioninfo.$valid && updatesummary(editdata)" novalidate="">     
+			<label class="item item-input">
+			  <span class="input-label">Course:</span>
+			  {{editdata.coursename}}
+			</label>
+			<label class="item item-input">
+			  <span class="input-label">Batch:</span>
+			  {{editdata.batchname}}
+			</label>
+			<label class="item item-input">
+			  <span class="input-label">Faculty:</span>
+			  {{editdata.faculty}}
+			</label>
+		 	<label class="item item-input">
+			  <span class="input-label">Date:</span>
+			  <input type="date" ng-model="editdata.summary_date" name="editDate" required>
+			  <input type="hidden" ng-model="editdata.id">
+			</label>
+				<span class="error" ng-show="(editSessioninfo.editDate.$dirty || submitted ) && editSessioninfo.editDate.$error.required">
+					date is required
+					</span>
+     	    <label class="item item-input">
+			  <span class="input-label">Title:</span>
+			  <input type="text" ng-model="editdata.title" name="edittitle" required >
+			 </label>
+				<span class="error" ng-show="(editSessioninfo.edittitle.$dirty || submitted ) && editSessioninfo.edittitle.$error.required">
+					title is required
+					</span>
+			 <label class="item item-input">
+			 <span class="input-label">Summary:</span>
+			  
+			   <textarea  class="msd-elastic" ng-model="editdata.summary"  name="editSummary" required>{{editdata.summary}}</textarea>
+			 </label>
+		       <span class="error" ng-show="(editSessioninfo.editSummary.$dirty || submitted ) && editSessioninfo.editSummary.$error.required">
+					summary is required
+					</span>
+		  <button  type="submit" class="button button-block button-positive" ng-disabled="!editSessioninfo.$valid" >Save</button>
+                 </form>
+		 </div>
+		
+   </div> </div>
+   
+   
+	 <script id="templates/modal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-balanced">
+          <h1 class="title">Summery Details</h1>
+          <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+           <div class="list card" ng-hide="summary_details">
+               <div class="item">
+                    
+                    <h2> Title :{{title}}</h2>
+                    <h3> Date : {{date}}</h3>
+                </div>
+           <div class="item item-body">
+               <label> <h2>Summery</h2> </label>
+                    <p>
+                
+                  {{summary}}<p>
+                
+		  
+           
+                    </div>
+            </div>
+        </ion-content>
+      </ion-modal-view>
+    </script>
+  </ion-content>
+</ion-view>
+

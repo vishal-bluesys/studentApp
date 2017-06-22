@@ -1,0 +1,62 @@
+ <ion-view view-title="Payment History" name="admissions-view">
+  <ion-content class="text-left">
+
+  <div class="row"><div class="col text-center">
+   <!-- <button class="button icon-left ion-clipboard button-positive" ng-click="liststudent()" >Payment Receipts</button>
+    <button class="button icon-left ion-easel button-energized" ng-click="showpayments()">Payment History</button> 
+      <br/><br/> -->
+	   <ion-list  class="list"  ng-hide="showpaymentlist">
+       
+            <div class="row alignleft" style="background-color:#ccc; border-radius:10px; font-weight:bold">
+                    <div class="col col-80" >{{coursename}}</div>
+                
+             </div>
+			
+			 <ion-item class="paysummery">
+	        
+			        <div class="row">  <div class="col">Payable Amount</div> <div class="col"> <div class="curssancysign">&#x20B9 </div> <div class="payamount"> {{total}}</div> </div>  </div>
+                    <div class="row" > <div class="col">Paid Amount</div> <div class="col"> <div class="curssancysign">&#x20B9 </div> <div class="payamount"> {{paid}}</div> </div>  </div>
+                    <div class="row"> <div class="col">Balanced</div> <div class="col"> <div class="curssancysign" style="background:white">&#x20B9 </div> <div class="balancepay">  {{balance}} </div> </div>  </div>
+    
+         
+         
+            </ion-item>
+			<ion-item class="item-divider paytableheads">
+			<div class="row">
+			 <div class="col col-25">Date</div>
+			 <div class="col col-25">Amount</div>
+			 <div class="col col-25">Media</div>
+			 <div class="col col-25">Receipt No.</div>
+			</div>
+			</ion-item>
+         <div class="item alignleft paydetails" ng-repeat="item in payments">
+               <div  class= "row" >
+			   <div class="col col-25">{{item.receiptdate}}</div>
+				<div class="col col-25">{{item.chq_amt}}</div>
+				<div class="col col-25">Cash</div>
+				<div class="col col-25"> {{item.receipt_id}} </div>
+
+                </div>
+                 
+            </div> 
+		  <!--<div class="list" ng-hide="showpaymentlist" >
+ 	     	  <div class="item" ng-repeat="item in payments">
+			 
+				Receipt Id -{{item.rcptid}}  Amount-{{item.chq_amt}}  Date- {{item.receiptdate}}
+			
+            </div> 
+           <div class="item">
+			Total:{{total}}<br>
+			Total Amount Received:{{paid}}<br>
+			Balance:{{balance}} <a href="{{url}}"  title="download reciept"> <i class="icon ion-arrow-down-a"></i></a>
+              </div>
+         </div>-->
+           
+             </ion-list>
+  
+	
+   </div> </div>
+	
+  </ion-content>
+</ion-view>
+

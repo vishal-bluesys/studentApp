@@ -1,0 +1,21 @@
+<ion-view view-title="Help And Feedback" class="tasks">
+  <ion-content class="addtasks padding" overflow-scroll="false" >
+  
+      <ion-list class="list list-inset" >
+	  <form  name="submitfeedback" novalidate="">
+	     <label class="item item-input">
+			 <span class="input-label">Feedback :</span>
+			 </label>
+			 
+			  <label class="item item-input">
+			  <textarea  rows="20" cols="20" ng-model="data.feedback"  name="feedback" required></textarea>
+			 </label>
+               <span class="error" ng-show="(submitfeedback.feedback.$dirty || submitted ) && submitfeedback.feedback.$error.required">
+					Feedback is required
+					</span>
+	          <button  class="button button-block button-positive" ng-disabled="!submitfeedback.$valid" ng-click=" submitFeedback(data)">Submit</button>
+             </form>
+	  
+	  </ion-list>
+  </ion-content>
+</ion-view>

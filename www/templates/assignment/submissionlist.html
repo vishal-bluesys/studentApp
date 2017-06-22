@@ -1,0 +1,29 @@
+ <ion-view view-title="Assignment {{id}}" name="assignment-view">
+     <ion-nav-buttons side="right">
+	  <a class="right button button-icon icon ion-plus"  href="#/main/addsubmission/{id}/{id}" ng-click="setdata(assingmentdata)"  ></a>
+      </ion-nav-buttons>
+  <ion-content>
+       <ion-list>
+      <ion-item ng-repeat="item in submissions_list" ng-if="item.sub_no" href="#/main/submissiondetail" ng-click="setdata({{item}})">
+           <div class="row">
+               <div class="col col-80">Submission -{{item.sub_no}}  </div>
+			   <div class="col col-20" class="tab-item"  ng-if="item.approved=='A'" Style='color:black' >
+					<i class="icon ion-thumbsup" ></i>
+					
+			   </div>
+			   <div class="col col-20" class="tab-item"  ng-if="item.approved=='R'" Style='color:red'>
+				  <i class="icon ion-thumbsdown"></i>
+				  
+				</div>
+				 <div class="col col-20" class="tab-item"  ng-if="item.approved=='N'" Style='color:gray'>
+				  <i class="icon ion-ionic"></i>
+				  
+				</div>
+            </div>   
+      </ion-item>
+	   <ion-item ng-if="!item.sub_no">
+	     <span class="error"> No More submissions Click + add </span>
+	   </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>

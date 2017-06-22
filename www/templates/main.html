@@ -1,0 +1,56 @@
+
+
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-balanced">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear" menu-toggle="left" ng-click="toggleleft();">
+        <span class="left logo"><img src="img/icon.png" class="logo"></span>
+          </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+ 
+    <ion-side-menu side= "left" class= "main-menu" enable-menu-with-back-views="false" >
+	
+        <ion-content class="sidebar" style=" background: rgba(0, 0, 0, 0.54);">
+            <ion-list>
+                <ion-item class= "heading-item item item-avatar side-bar-profile" nav-clear menu-close href= "#/main/showprofile">
+                    <div class= "user-image-container">
+                        <pre-img ratio= "_1_1" helper-class= "rounded-image"> <img class= "user-image" id = "p_pic_slider" ng-src= "{{profile_pic}}" spinner-on-load> </pre-img> </div>
+                    <h2 class= "greeting">Welcome</h2>
+                    <p class= "message">{{name}}</p>
+				</ion-item>
+                <ion-item class= "item-icon-left" nav-clear menu-close href="#/main/dash"> <i class= "icon ion-monitor"></i>
+                    <h2 class= "menu-text">Dashboard</h2> </ion-item>
+				 <ion-item class= "item-icon-left" nav-clear menu-close href="#/main/attendance"> <i class= "icon ion-ios-star-outline"></i>
+                    <h2 class= "menu-text"> Attendance</h2> </ion-item>
+                <ion-item class= "item-icon-left" nav-clear menu-close href="#/main/payments"> <i class= "icon ion-social-usd-outline"></i>
+                    <h2 class= "menu-text">Payments History</h2> </ion-item>
+               <!-- <ion-item class= "item-icon-left" nav-clear menu-close href="#/main/dash"> <i class= "icon ion-ios-email-outline"></i>
+                    <h2 class= "menu-text">Invites</h2> </ion-item>-->
+				<ion-item class="item-divider"></ion-item>
+                <ion-item class= "item-icon-left" nav-clear menu-close href="#/main/settings"> <i class= "icon ion-gear-a"></i>
+                    <h2 class= "menu-text">Settings </h2> </ion-item>
+                <ion-item class= "item-icon-left" nav-clear menu-close href="#/main/logout"> <i class= "icon ion-power"></i>
+                    <h2 class= "menu-text">Logout</h2> </ion-item>
+                <ion-item class= "item-icon-left" nav-clear menu-close href="#/main/aboutus"> <i class= "icon ion-ios-information-outline"></i>
+                    <h2 class= "menu-text">About Us</h2> </ion-item>
+                <ion-item class= "item-icon-left" nav-clear menu-close href="#/main/help"> <i class= "icon ion-help-buoy"></i>
+                    <h2 class= "menu-text">Help and Feed back</h2> </ion-item>
+			     <ion-item class= "item-icon-left" nav-clear menu-close href="#/main/legal"> <i class= "icon ion-ios-list-outline"></i>
+                    <h2 class= "menu-text">Legal</h2> </ion-item>
+                  <ion-item class= "item-icon-left" nav-clear menu-close href="#"> <i class= "icon ion-bulb"></i>
+                    <h2 class= "menu-text">Creative Charger </h2> </ion-item>
+					</ion-list> 
+			  </ion-content> 
+			</ion-side-menu>
+	</ion-side-menus>
+
+
+

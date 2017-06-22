@@ -1,0 +1,68 @@
+ <ion-view view-title="Assignment {{id}}" name="assignment-view">  
+ 
+    <ion-nav-buttons side="right">
+	<button class="right button button-icon icon ion-android-attach"  ng-click="popover.show($event)" ></button>
+      </ion-nav-buttons>
+     
+  <ion-content class="padding">
+  
+   <form name="assigmentform"  novalidate="">
+		   <input type="hidden" ng-model="data.sub_id">
+        	<label class="item item-input" >
+				<div class="input-label">
+				 Assignment - {{data.ass_no}}
+				</div>
+				
+			</label>
+		    <label class="item item-input">
+				<div class="input-label">
+				 Title - {{data.ass_title}}
+				</div>
+				
+			</label>
+		    <label class="item item-input">
+				<div class="input-label">
+				 Description  
+				</div>
+				
+			</label>
+			 <label class="item item-input">
+				
+				<p style="white-space:normal">{{data.ass_description}}</p>
+			</label>
+		     <div class="item">
+				<div class ="item item-icon-right"ng-repeat="img in images">
+					<img ng-src="{{img}}" style="max-width:250px;max-height:250px" />
+					 <i class="icon ion-trash-a" ng-click="deletePic($index);"></i>
+				</div>
+	         </div>
+		  
+		   <label class="item item-input">
+			  <span class="input-label">Submission Details:</span>
+			  </label>
+			 <label class="item item-input">
+			  <textarea name="assignDetails" rows="6" ng-model="data.subdetails" required></textarea>
+			   <span class="error" ng-show="( assigmentform.assignDetails.$dirty || submitted  ) && assigmentform.assignDetails.$error.required">details are required </span>
+			</label>
+			 <button class="button button-block button-positive" ng-click="uploadImages(data)" ng-disabled="!assigmentform.$valid">Submit</button>
+			<!-- <button class="button button-block button-positive" ng-click="uploadImages()">upload</button>-->
+		        
+        </form>
+  
+  
+  <script id="templates/popover.html" type="text/ng-template" class="popover">
+      <ion-popover-view  class="popover2">
+        <ion-content>
+          <div class="list">
+		          <a class="item icon-left ion-aperture " ng-click="selectImage()">
+				Capture Image
+			   </a>
+			   <a class="item  icon-left  ion-images" ng-click="imagepick()">
+				Select from gallary
+			   </a>
+          </div>
+        </ion-content>
+      </ion-popover-view>
+    </script>  
+  </ion-content>
+  </ion-view>

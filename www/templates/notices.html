@@ -1,0 +1,43 @@
+ <ion-view view-title="Notice Board" name="notice-view" class="tasks">
+   
+  <ion-content class="">
+
+   
+	   	<div class="list">
+ 	     	  <div ng-repeat="item in notices | orderBy:'-created_at'" class="list" style="border-radius:12px;"  ng-click="showNotice(item);">
+			    <!--  <div  style="text-align:left; background : #9B9B9B; margin:0px -13px 0px -13px; padding-left:25px"> {{ ( item.created_at == today) ? 'Today' : item.date|date }} </div>-->
+         <div  style="text-align:left; background : #9B9B9B; margin:0px -13px 0px -13px; padding-left:25px"> {{ ( item.created_at == today) ? 'Today' : item.created_at|date }} </div>
+				  <div class="list card" style="border-radius:12px; margin-bottom: -10px;">
+				   <div class="item item-divider" style="text-align:left; border-bottom : 2px solid  #9B9B9B;">
+						 <h3>{{item.notice_title}}</h3>
+					   </div>
+					   
+					   <div class="item item-text-wrap">
+						 <p>{{item.notice_content}}..<p>
+					   </div>
+					   </div>
+			
+            </div> 
+        </div>
+		<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
+		
+		 
+		
+		
+   <script id="templates/noticemodal.html" type="text/ng-template">
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-balanced">
+          <h1 class="title">{{notice.notice_title}}</h1>
+          <button class="button button-clear button-primary" ng-click="modal1.hide()">Cancel</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+          <p>{{notice.notice_content}}</p>
+		 
+        </ion-content>
+      </ion-modal-view>
+    </script>
+   
+
+  </ion-content>
+</ion-view>
+

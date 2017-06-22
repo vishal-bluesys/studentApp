@@ -1,0 +1,1280 @@
+/* Empty. Add your own CSS if you like */
+
+
+
+/* login page */
+
+ .login input[type="text"], .login input[type="password"] {
+       background-color: rgba(255, 255, 255, 100) !important;
+    color: black;
+    /*width: 96%;*/
+    
+}
+
+.dashboard .bar .title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    margin: 0 10px;
+    min-width: 30px;
+    height: 43px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 44px;
+    background: url('../img/icon/namedLogo1.png') no-repeat;
+    background-size: 60px;
+    background-position-x: 50%;
+    background-position-y: 10px;
+}
+
+.dashboard a {
+	text-decoration:none;
+	padding-top: 7px;
+	color:black;
+}
+.dashboard a : visited{
+	text-decoration:none;
+	color:black;
+}
+
+.login input, .login .item-input, .login .item-input-wrapper {
+    background-color: rgba(255, 255, 244, 0) !important;
+    color: black;
+    width: 96%; 
+    border-radius: 20px 20px 20px 20px;
+    text-align: center;
+
+}
+.login .scroll-content{
+	background:url('../img/background/login_bg.png') no-repeat center  ;
+	 background-size: 100% 100%;
+}
+
+.scroll-content{
+	background:url('../img/background/comman_bg.png') no-repeat center  ;
+	 background-size: 100% 100%;
+}
+.login h4{
+	    color: white;
+	text-align:center;
+}
+.login-form{
+	position : absolute;
+	top: 170px;
+    left: 10%;
+    height: 400px;
+    width: 80%;
+   /* border: 1px solid gray;*/
+       background-color: rgba(230, 229, 229, 0.5);
+	
+}
+.login .button.button-assertive.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    left: 70px;
+    bottom: 30px;
+}
+.login .input-label {
+    display: table;
+    padding: 7px 10px 7px 0px;
+    max-width: 200px;
+    width: 35%;
+    color: white;
+    font-size: 16px;
+	
+	border:none;
+}
+
+.login .list{
+   position : relative;
+   top:100px;   
+	
+}
+.login .logo{
+	position : absolute;
+	top: 90px;
+    left: 28%;
+    height: 160px;
+    width: 160px;
+	z-index:1;
+	border: 8px solid black;
+    border-radius: 50%;
+	
+}
+.login .namedLogo{
+	position : relative;
+    top:100px;
+	left:29%;  
+	width:128px;
+	  background-color: rgba(244, 244, 244, 0) !important;
+}
+.login .role{
+	position : relative;
+    top:100px;
+	left:35%;  
+	width:100px;
+	  background-color: rgba(244, 244, 244, 0) !important;
+}
+.login .item {
+    
+    background-color: rgba(244, 244, 244, 0) !important;
+    color: black;
+	border:none;
+}
+
+.login h2,h6{
+    color:black;
+}
+
+.login .login-btn{
+	color:white;
+	background-color:black;
+	border:none;
+}
+/*login css ends */
+.background{
+ background : url('../img/icon.png') no-repeat center 100px fixed;
+ background-size: 100% 100%;
+ 
+}
+
+.tabs-balanced > .tabs, .tabs.tabs-balanced {
+    border-color: #0C0C0C;
+    background-color: #0A0A0B;
+   /* background-image: linear-gradient(0deg, #030303, #000 50%, transparent 50%);*/
+    color: #FFF;
+}
+
+
+.bar.bar-balanced {
+    border-color: #000000;
+    background-color: #000000;
+    background-image: linear-gradient(0deg, #000000, #000000 50%, transparent 50%);
+    color: #FFF;
+	text-align:center;
+}
+
+body, .ionic-body{
+background:#898989;
+}
+
+.login .button.button-positive {
+   /* border-color: #D9DADA;*/
+    background-color: #000000;
+    color: #FFF;
+}
+.button.button-energized {
+    border-color: #D9DADA;
+    background-color: #000000;
+    color: #FFF;
+}
+.button.button-assertive {
+    border-color: #D9DADA;
+    background-color: #000000;
+    color: #FFF;
+}
+.button.button-stable {
+    border-color: #D9DADA;
+    background-color: #000000;
+    color: #FFF;
+}
+.error{
+ color:red;
+ text-align:center;
+ padding-left:20px;
+}
+.login span{
+	
+	
+}
+.logo{
+ width:32px;
+ height:32px;
+ padding:0 0 0 0;
+
+}
+
+pre {
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.submenu{
+	padding:0;
+}
+.submenu-item{
+	padding-left:40px;
+}
+
+.btnactive{
+	
+	background-color:#ccc;
+	border-bottom:8px solid #000;
+}
+
+/* ------- SEARCH ----*/
+.searchBar {
+	color: #000;
+	margin: 0 !important;
+	padding: 0;
+}
+.searchBar .icon {
+	font-size: 27px;
+	line-height: 1.2;
+	padding-right: 6px;
+	padding-left: 6px;
+}
+.searchBar .searchTxt {
+	border-bottom: 1px solid #000;
+	left: 55px;
+	width: calc(100% - 100px);
+	position: fixed;
+	height: calc(100% - 10px);
+}
+.searchBar.numicons2 .searchTxt {
+	width: calc(100% - 135px);
+}
+.searchBar .searchTxt > .bgdiv {
+	background-color: #aaa;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0.3;
+}
+.searchBar .searchTxt > .bgtxt {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.searchBar .searchTxt input {
+	background-color: inherit;
+	color: #000;
+	padding-left: 5px;
+	padding-right:5px;
+}
+
+
+
+.coursehead{
+    background-color: #e6b400;
+}
+.tableheading{
+    background-color: #D9DADA;
+}
+.subtotal{
+    background-color: #4cd964;
+}
+
+.master1 {
+    background-color: rgba(214, 212, 212, 0.46);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+     text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+     color:black;
+}
+
+.dashboard a:visited{
+    
+      text-decoration: none;
+      color:black;
+      
+}
+
+.master2 {
+    background-color: rgba(97, 95, 95, 0.62);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    color: white;
+}
+.master3 {
+     padding: -1px;
+    font-size: 16px;
+    border: 1px solid black;
+    color: black;
+}
+
+/*  DASHBOARD CSS  */
+ .noticeBoard{
+	 
+	 width:95%;
+	 height: 58px;
+	 border-radius:8px;
+	 padding:0;
+	 background: #CCCCCC;
+
+ }
+  .hidden-chat-link .chat-btn {
+	    width: 75px;
+        padding: 10px;
+        background: #CCCCCC;
+	    border-radius: 10px;
+}
+
+.dashboard .col-50{
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    background-color: #E6E6E6;
+    max-width: 40%;
+    border-radius: 14px;
+}
+.dashboard .col-50  img {
+	width: 86px;
+    margin: auto;
+    padding: 10px;
+    background: #E6E6E6;
+}
+	
+
+
+.quick-links .button{
+	
+	
+	    border: none;
+}
+
+.quick-links .row{
+	
+	margin-bottom : 20px;
+}
+
+.quick-links-foot-btn{
+	    margin:auto;
+	    width: 50px;
+        padding: 10px;
+        background: #E6E6E6;
+	    border-radius: 10px;
+		text-align:center;
+		border:none;
+	
+}
+
+.footer-link .col-30{
+	    background-color: #e6e6e6;
+        max-width: 110px;
+		text-align:center;
+		margin-left:5px;
+		margin-right:5px;
+		padding:none;
+		border-radius:10px;
+}
+.footer-link figcaption{
+	
+	margin-top:-15px;
+}
+@media (min-width: 680px){
+.dashboard {
+    margin:auto;
+    width: 60%;
+    color:black;
+}
+
+.masters{
+    
+     margin:auto;
+    width: 60%;
+    color:black;
+}
+}
+@media (min-width: 900px){
+.dashboard {
+    margin:auto;
+    width: 60%;
+    color:black;
+}
+
+.masters{
+    
+     margin:auto;
+    width: 40%;
+    color:black;
+}
+}
+
+
+
+
+/**Query Css**/
+
+.bar-footer {
+  overflow: visible !important;
+}
+
+.bar-footer textarea {
+  resize: none;
+  height: 25px;
+}
+
+/* fixes an ios bug bear */
+button.ion-android-send {
+  padding-top: 2px;
+}
+
+/* add this to keep your footer buttons down 
+at the bottom as the textarea resizes */
+.footer-btn-wrap {
+  position: relative; 
+  height: 100%; 
+  width: 50px; 
+  top: 7px;
+}
+
+.footer-btn {
+  position: absolute !important; 
+  bottom: 0;
+}
+
+img.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+}
+
+img.profile-pic.left {
+  left: 10px;
+}
+
+img.profile-pic.right {
+  right: 10px;
+}
+
+.ion-email {
+  float: right;
+  font-size: 32px;
+  vertical-align: middle;
+}
+
+.message {
+  font-size: 14px;
+}
+
+.message-detail {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.bar.item-input-inset .item-input-wrapper input {
+  width: 100% !important;
+}
+
+.message-wrapper {
+  position: relative;
+}
+
+.message-wrapper:last-child {
+  margin-bottom: 10px;
+}
+
+.chat-bubble {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 18px;
+  position: relative;
+  margin: 10px;
+  max-width: 80%;
+}
+
+.chat-bubble:before {
+  content: "\00a0";
+  display: block;
+  height: 16px;
+  width: 9px;
+  position: absolute;
+  bottom: -7.5px;
+}
+
+.chat-bubble.left {
+  background-color: #e6e5eb;
+  float: left;
+  margin-left: 55px;
+}
+
+.chat-bubble.left:before {
+  background-color: #e6e5eb;
+  left: 10px;
+  -webkit-transform: rotate(70deg) skew(5deg);
+}
+
+.chat-bubble.right {
+  background-color: #717171;
+  color: #fff;
+  float: right;
+  margin-right: 55px;
+}
+
+.chat-bubble.right:before {
+  background-color: #717171;
+  right: 10px;
+  -webkit-transform: rotate(118deg) skew(-5deg);
+}
+
+.chat-bubble.right a.autolinker {
+  color: #fff;
+  font-weight: bold;
+}
+
+.user-messages-top-icon {
+  font-size: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+  right: 5px;
+}
+
+.msg-header-username {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+}
+
+.chat input, .chat textarea, .chat .item-input, .chat .item-input-wrapper {
+  background-color: #f4f4f4 !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.cf {
+  clear: both !important;
+}
+
+a.autolinker {
+  color: #3b88c3;
+  text-decoration: none;
+}
+
+/* loading */
+.loader-center {
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.loader .ion-loading-c {
+  font-size: 64px;
+}
+
+
+	  
+ion-spinner.spinner-on-load {
+  -webkit-animation: none;
+  animation: none;
+  stroke: #FFFFFF;
+  width: 28px;
+  height: 28px;
+  line-height: inherit;
+  top: -webkit-calc(50% - 14px);
+  top: calc(50% - 14px);
+  left: -webkit-calc(50% - 14px);
+  left: calc(50% - 14px); }
+
+.multi-bg-outer {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2; }
+  .multi-bg-outer.finish-loading {
+    background-color: transparent; }
+  .multi-bg-outer .bg-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #303030;
+    z-index: -1;
+    opacity: 0.6; }
+  .multi-bg-outer .multi-bg {
+    display: none; }
+
+.loading-container .loading {
+  background-color: rgba(68, 68, 68, 0.9); }
+  .loading-container .loading * {
+    color: #f2f2f2;
+    font-weight: 500; }
+
+	  
+	
+/* Flowting button */
+/*.float-button {
+
+background-color:#000000;
+border-color: #D9DADA;
+opacity: 0.9;
+color: white;
+border-radius: 50%;
+/*border-radius:15% 0 0 0;
+width: 30px;
+padding: 25px;
+font-size: 40px;
+position: fixed;
+bottom: 5%; /* Adjust height 
+right: 5%; /* Adjust position 
+z-index: 1000;
+}*/
+
+.float-button .height_fix {
+  margin-top: 100%;
+  border: 1px solid red;
+}
+
+.float-button .content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: -15px;
+  color: white;
+}
+
+.float-button {
+    background-color: #000000;
+    border-color: #D9DADA;
+    opacity: 0.9;
+    color: #0c0c0c;
+    border-radius: 50%;
+    width: 20px;
+    padding: 15px;
+    font-size: 30px;
+    position: fixed;
+    top: 9%;
+    right: 3%;
+}
+/*Image show */
+
+.image-list-thumb {
+    padding: 2px 2px 2px 2px;
+    height: 150px;
+}
+
+.image-modal {
+    width: 100% !important;
+    height: 100%;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.transparent {
+  background: rgba(0,0,0,0.7);
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center, center;
+}
+.alignleft{
+	
+	text-align:left;
+}
+
+ .popover2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    z-index: 10;
+    display: block;
+    margin-top: 12px;
+    margin-left: -110px;
+    height: 122px;
+    width: 220px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+}
+
+/*side bar*/
+.side-bar 
+ .profilebackground  {
+    background: url(../img/background/default_profile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*side Menu*/
+ion-side-menu ion-content {
+ /* background-color: #000;*/
+  }
+ion-side-menu ion-item.item {
+  border-right: none;
+  border-left: none;
+  border-color: #33383e; }
+  ion-side-menu ion-item.item .item-content {
+   /* background-color: #000; */
+	}
+    ion-side-menu ion-item.item .item-content .icon:before {
+      background-color: #3E454C;
+      color: #FFFFFF;
+      border-radius: 50%;
+      font-size: 22px;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+	  }
+  ion-side-menu ion-item.item .item-content.activated {
+    background-color: #555e68; 
+	
+	}
+  ion-side-menu ion-item.item .menu-text {
+    /*color: #cccccc;*/
+    font-weight: 500; }
+ion-side-menu ion-item.item:first-child {
+  border-top: none; }
+ion-side-menu ion-item.item:last-child {
+  border-bottom: none; }
+ion-side-menu .heading-item .item-content {
+  height: 177px;
+  padding-top: 45px;
+  padding-left: 115px;
+ background: url(../img/background/default_profile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  padding-bottom: 0px; }
+ion-side-menu .heading-item .user-image-container {
+  width: 90px;
+  position: absolute;
+  top: 16px;
+  left: 12px; }
+  ion-side-menu .heading-item .user-image-container .user-image {
+    border-radius: 50%;
+    padding: 8px;
+    
+	/*border: 1px solid #999999;*/
+    width: 100px;
+    height: 100px;
+	}
+ion-side-menu .heading-item .greeting {
+  color: #FFFFFF;
+  font-weight: 500; }
+ion-side-menu .heading-item .message {
+  color: #f9f9f9; 
+  }
+  
+  .item-complex .item-content, .item-radio .item-content {
+    position: relative;
+    z-index: 2;
+    padding: 16px 49px 16px 16px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+  
+
+:hov
+
+.cls
+
+element.style {
+}
+ionic.css:4900
+.item-complex.item-icon-left {
+    padding-left: 0;
+}
+style.css?liver…2425518165:765
+ion-side-menu ion-item.item {
+    border-right: none;
+    border-left: none;
+    border-color: #33383e;
+}
+ionic.css:4895
+.item-icon-left {
+    padding-left: 54px;
+}
+ionic.css:4777
+.item-complex, a.item.item-complex, button.item.item-complex {
+    padding: 0;
+}
+ionic.css:4757
+.item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+ .profile-view {
+  background-color: #FFFFFF !important; }
+  .profile-view .profile-container {
+    margin: 0px auto;
+    margin-top: 6vh;
+     text-align: center;
+        z-index: 1;
+	}
+  .profile-view .user-image-container {
+    width: 46vw; }
+    .profile-view .user-image-container .user-image {
+      border-top: 1px solid #444444;
+      padding: 8px;
+      background-color: #FFFFFF;
+      width: 100%;
+      border-radius: 50%; }
+  .profile-view .user-name {
+    font-size: 20px; }
+  .profile-view .user-twitter {
+    margin-top: 5px; }
+  .profile-view .top-content {
+    border-bottom: 1px solid #444444;
+    position: relative;
+    height: 20vh;
+    margin-bottom: 25vh; 
+	/*background-color: black;*/
+	}
+  .profile-view .user-background-image-outer {
+    height: 20vh;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0; }
+  .profile-view .bottom-content {
+    padding: 0px;
+    /*background-color: #FFFFFF;*/
+    min-height: 55vh;
+    position: relative; }
+    .profile-view .bottom-content .user-bio {
+      text-align: center;
+      margin: 6px 30px;
+      padding: 6px 0px; }
+	 
+	 
+	 
+.profile-view .item {
+	  background-color: rgba(255, 255, 255, 0.06);
+		     overflow: hidden; 
+         text-overflow: ellipsis; 
+      white-space: wrap; 
+		     
+}	 
+/*payment History*/
+
+.paysummery{
+	border-color: #ddd;
+    background-color: #E6E6E6;
+    color: #000;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: 0;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 16px;
+	text-align:left;
+	border-radius:10px;
+	margin-top :  10px;
+	margin-bottom : 10px;
+	color:black;
+	
+	
+}
+
+.curssancysign{
+	float:left;
+	color:black;
+	padding:2px;
+	background : #908e8e;
+	width:20px;
+	text-align:center;
+	
+}
+
+.payamount{
+	color:black;
+	margin-left:23px;
+	padding:2px;
+    background : #908e8e;
+	text-align:center;
+}
+
+.balancepay{
+    margin-left:23px;
+	padding:2px;
+    background : #fff;
+	text-align:center;
+	color:black;
+}	  
+
+.paytableheads{
+  	background : #E6E6E6;
+	border-bottom:1px solid black;
+	border-radius: 10px  10px 0px 0px;
+	
+}
+
+.paydetails{
+	background : #E6E6E6;
+	border:none;
+}
+
+/* Task Template */
+
+.addtasks .list-inset {
+    overflow: hidden;
+    margin: 20px 10px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0);
+}
+	  
+.addtasks .list-inset .item{
+	margin-right: 0;
+    margin-bottom: 4px;
+    margin-left: 0;
+    border-radius: 11px;
+	
+	
+}
+/*Syllabus*/
+.syllabus .item{
+     overflow: hidden; 
+     text-overflow: ellipsis; 
+      white-space: wrap; 
+}
+/*Side Bar */
+.sidebar .item {
+    border-color: black;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: white;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: 0px;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 16px;
+	border:none;
+}
+
+.sidebar .side-bar-profile{
+	height: 177px;
+}
+.sidebar .side-bar-profile .item .item-content{
+	height: 177px;
+}
+.sidebar .item .item-content {
+background-color: rgba(0, 0, 0, 0.58)
+}
+.sidebar .item-divider {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    min-height: 3px; 
+    background-color: #f5f5f5;
+    color: #222;
+    font-weight: 500;
+	border:none;
+}
+.sidebar .menu-text{
+	
+	color:white;
+}
+
+
+/* Attendace */
+
+.attendance .board{
+	margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border: none;
+    border-radius: 29px;
+    background: #E6E6E6;
+    text-align: center;
+}
+
+.attendance .register{
+     margin-top: 20px;
+    border:none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    background: #e6e6e6;
+    border-radius: 25px;
+}
+.attendance .register .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 5px;
+    width: 90%;
+    border-bottom: 1px solid black;
+    margin: auto;
+}
+
+.attendance .register :last-child{
+	border-bottom:none;
+}
+
+/* Brain-Chat*/
+
+.brain-chat .tabs-top > .tabs, .tabs.tabs-top {
+    top: 44px;
+    padding-top: 0;
+    background-position: bottom;
+    border-top-width: 0;
+    border-bottom-width: 1px;
+}
+
+.brain-chat .tabs-striped .tabs {
+    background-color: black;
+    background-image: none;
+    border: none;
+    border-bottom: 1px solid #040404;
+    padding-top: 2px;
+    color: white;
+}
+
+.chat-content{
+	position:relative;
+	top: 93px;
+}
+
+
+
+/*hidden chat*/
+
+.hidden-chat .tab-item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: block;
+    overflow: hidden;
+    max-width: 191px;
+    height: 100%;
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Helvetica Neue", "Roboto", sans-serif;
+    opacity: 0.7;
+}
+
+/*.tabs-striped .tabs {
+    background-color: black;
+    background-image: none;
+    border: none;
+    /* border-bottom: 1px solid #ddd; 
+    padding-top: 2px;
+}
+*/
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
+    color: #ffffff;
+}
+
+ion-tabs.tabs-color-active-positive .tab-item {
+    color: #fff;
+}
+
+.tabs-striped .tabs {
+    background-color: black;
+    background-image: none;
+    border: none;
+    border-bottom: none;
+    padding-top: 2px;
+}
+
+.tabs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: horizontal;
+    -moz-flex-direction: horizontal;
+    -ms-flex-direction: horizontal;
+    flex-direction: horizontal;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    border-color: #b2b2b2;
+    background-color: #000000;
+    background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
+    color: #444;
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+    height: 49px;
+    border-style: solid;
+    border-top-width: 1px;
+    background-size: 0;
+    line-height: 49px;
+}
+.hidden-chat  .item-complex .item-content, .item-radio .item-content {
+    position: relative;
+    z-index: 2;
+    padding: 16px 0px 0px 65px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.hidden-chat .item {
+    border-color: #000;
+    background-color: rgba(255, 255, 255, 0.14);
+    color: #444;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: none;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 16px;
+}
+
+.tabs-striped .tab-item.tab-item-active, .tabs-striped .tab-item.active, .tabs-striped .tab-item.activated {
+    margin-top: -2px;
+    border-style: solid;
+    border-width: 7px 0 0 0;
+    border-color: #fff;
+    font-weight: bolder;
+    background-color: black;
+}
+
+/* referance */
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+
+
+
+/*  Incognito */
+
+.incognito .chat-bubble.left {
+  background-color: #e6e5eb;
+  float: left;
+  margin-left: 5px;
+}
+
+.incognito .chat-bubble.left:before {
+  background-color: inherit;
+  left: 10px;
+  -webkit-transform: rotate(70deg) skew(5deg);
+}
+
+.incognito .chat-bubble.right {
+  background-color: #717171;
+  color: #000;
+  float: right;
+  margin-right: 5px;
+}
+
+.incognito .chat-bubble.right:before {
+  background-color: inherit;
+  right: 10px;
+  -webkit-transform: rotate(118deg) skew(-5deg);
+}
+
+.incognito .chat-arrow-left{border:solid 10px transparent;border-right-color:#fff;position:absolute;margin:-85px 0 0 -20px;}
+
+
+
+/*about us*/
+
+.about-us .heading{
+	background : #908e8e;
+	padding : 5px;
+	
+	
+}
+
+.about-us .content{
+	padding:5px;
+	margin-top:5px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:auto;
+	width:95%;
+	color:black;
+	
+	background:rgba(144, 142, 142, 0.26);
+	
+	
+}

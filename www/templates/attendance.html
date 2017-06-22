@@ -1,0 +1,30 @@
+ <ion-view view-title="Attendance" name="attendance-view" class="attendance">
+   <ion-nav-buttons side="right">
+        
+    </ion-nav-buttons>
+  <ion-content>
+
+            <div class="board">
+              <div class="row">
+                  <div class="col">Total </div> <span class="col" style="color:green">Present</span><span  class="col" style="color: red;">Absent </span> <span  class="col" style="color: black;">  <b> Average</b></span>
+               </div>
+			    <div class="row">
+                  <div class="col">{{total}} </div> <span class="col" style="color:green">{{present}}</span><span  class="col" style="color: red;">{{absent}}</span> <span  class="col" style="color: black;">  <b>{{avg}} </b></span>
+               </div>
+			 </div>
+			 <div class="register">
+ 	     	  <div ng-repeat="student in att_list">
+                         
+			 
+				<div class="row" >
+				<div class="col col-75">{{student.att_date | date}}</div> <div class="col"> <span style="color:{{student.attendance=='P' ? 'green' : 'red' }}"> {{student.attendance}}</span></div>
+				</div>
+			 
+            </div> 
+         </div>
+	
+       
+	
+  </ion-content>
+</ion-view>
+

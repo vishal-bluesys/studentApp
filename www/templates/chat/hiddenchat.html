@@ -1,0 +1,71 @@
+ <ion-view view-title="Hidden Zone" name="query-view" class="incognito">
+   
+  
+        <div class="loader-center" ng-if="!doneLoading">
+            <div class="loader">
+              <i class="icon ion-loading-c"></i>
+            </div>
+        </div>
+      
+          <ion-content has-bouncing="true" class="has-header has-footer " 
+              delegate-handle="userMessageScroll">
+            
+              <div ng-repeat="message in messages" class="message-wrapper"
+                  on-hold="onMessageHold($event, $index, message)">
+      
+                  <div ng-if="message.flag === 'F'">
+                      
+                
+                      
+                      <div class="chat-bubble left"  style="background:{{message.color}}">
+      
+                          <div class="message" ng-bind-html="message.text | nl2br" autolinker>
+                          </div>
+                          
+                          <div class="message-detail">
+                            
+                               
+                              <span am-time-ago="message.date"></span>
+							   </div>
+      
+                      </div>
+					  <div class="chat-arrow-left"></div>
+                  </div>
+      
+                  <div ng-if="message.flag === 'S'">
+                    
+                                        
+                      <div class="chat-bubble right" style="background:{{message.color}}">
+      
+                          <div class="message" ng-bind-html="message.text | nl2br" autolinker>
+                          </div>
+      
+                          <div class="message-detail">
+                               <span am-time-ago="message.date"></span>
+			              </div>
+      
+                      </div>
+                    
+                  </div>
+      
+                  <div class="cf"></div>
+      
+              </div>
+     </ion-content>
+
+<form name="sendMessageForm" ng-submit="sendMessage(input.message)" novalidate class="chat">
+              <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
+                  <label class="item-input-wrapper">
+                      <textarea ng-model="input.message" value="" placeholder="Send {{toUser.username}} a message..." required minlength="1" maxlength="1500" msd-elastic></textarea>
+                  </label>
+                  <div class="footer-btn-wrap">
+                    <button class="button button-icon icon ion-android-send footer-btn" type="submit"
+                        ng-disabled="!input.message || input.message === ''">
+                    </button>
+                  </div>
+              </ion-footer-bar>
+          </form>
+          
+
+
+</ion-view>
